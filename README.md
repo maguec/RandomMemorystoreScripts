@@ -16,6 +16,8 @@ pip install -r requirements.txt
 Looks through the keyspace and removes keys starting with a pattern.
 Remove the `--dry-run` to actually remove the keys
 
+This works on a single shard so run against every shard individually
+
 ```bash
 ./scan_to_unlink.py --redis-port $REDISPORT --redis-host $REDISHOST --scan-prefix='{MYPREFIX}:' --dry-run
 ```
